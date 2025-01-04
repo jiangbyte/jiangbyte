@@ -1,16 +1,17 @@
-## Hi there 👋
+## Hi This is Charlie Zhang.
 
-<!--
-**charlie-zhang-code/charlie-zhang-code** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<img
+  src="https://github-readme-stats.vercel.app/api?username=charlie-zhang-code&count_private=true&show_icons=true&bg_color=ffffff&title_color=FF4500&text_color=FF7F50&icon_color=FF7F50&hide_title=false"
+  title="charlie-zhang-code's GitHub Stats"
+  align="right"
+  width="50%"
+/>
 
-Here are some ideas to get you started:
+A General undergraduate in Computer Science and Technology, hobbiest programmer.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- ⌨️: Java, Golang, C, C++, and Python
+- 💻: Spring, GoZero, FastAPI
+
+### More information
+
+- **Blog**: https://charlie-zhang-code.github.io/
