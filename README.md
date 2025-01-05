@@ -14,4 +14,5 @@ A General undergraduate in Computer Science and Technology, hobbiest programmer.
 
 ### More information
 
-- **Blog**: https://charlie-zhang-code.github.io/
+- **Blog**: [Charlie Blog](https://charlie-zhang-code.github.io/)
+- **Gitee**: [Charlie Zhang](https://gitee.com/charlie-zhang-code/)
