@@ -15,8 +15,6 @@
 
 📊 Currently advancing my expertise in data-intensive architectures and distributed systems.
 
----
-
 ### 🛠️ Tech Stack
 
 **🤖 AI Engineering**:
@@ -40,13 +38,9 @@
 
 - Electron, Uniapp
 
----
-
 ### 🔥 Current Focus 
 
 - Finetuning small LLMs for vertical domains  
-
----
 
 ### 📚 Writings & Community
 
