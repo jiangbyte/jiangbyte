@@ -1,4 +1,4 @@
-## 👋 Hi, I'm Charlie Zhang 
+## 👋 Hi, I'm Charlie
 
 <img
   src="https://github-readme-stats.vercel.app/api?username=charlie-zhang-code&count_private=true&show_icons=true&bg_color=ffffff&title_color=FF4500&text_color=FF7F50&icon_color=FF7F50&hide_title=false"
