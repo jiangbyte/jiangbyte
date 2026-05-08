@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Charlie Zhang · JiangByte
+# 👋 Hi, I'm Charlie Zhang
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com?user=jiangbyte&theme=github-dark&hide_border=true" />
