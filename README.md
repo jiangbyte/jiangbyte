@@ -1,5 +1,7 @@
 # 👋 Hi, I'm Charlie Zhang · JiangByte
 
+<img align="right" src="https://github-readme-streak-stats.herokuapp.com?user=jiangbyte&theme=github-dark&hide_border=true" />
+
 **Full-stack Developer · CS Graduate '26 · Guizhou, China**
 
 A full-stack developer proficient in Java, Python, and Go, with project experience spanning web full-stack, desktop applications, and game development. Passionate about leveraging AI tools to boost productivity and staying curious about emerging technologies.
@@ -39,18 +41,9 @@ A full-stack developer proficient in Java, Python, and Go, with project experien
 ![](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
 ![](https://img.shields.io/badge/Unity-FFFFFF?style=flat-square&logo=unity&logoColor=black)
 
-### 📊 Stats & Activity
+### 📈 Activity
 
-<table>
-  <tr>
-    <td width="35%" valign="top">
-      <img src="https://github-readme-streak-stats.herokuapp.com?user=jiangbyte&theme=github-dark&hide_border=true" />
-    </td>
-    <td width="65%" valign="top">
-      <img src="https://github-readme-activity-graph.vercel.app/graph?username=jiangbyte&theme=github-dark&hide_border=true" />
-    </td>
-  </tr>
-</table>
+![](https://github-readme-activity-graph.vercel.app/graph?username=jiangbyte&theme=github-dark&hide_border=true)
 
 <p align="center">
   <b>Thanks for visiting!</b>&nbsp;&nbsp;
