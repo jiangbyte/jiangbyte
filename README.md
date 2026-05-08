@@ -39,14 +39,6 @@ A full-stack developer proficient in Java, Python, and Go, with project experien
 ![](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
 ![](https://img.shields.io/badge/Unity-FFFFFF?style=flat-square&logo=unity&logoColor=black)
 
-### 📊 GitHub Stats
-
-![](https://github-readme-stats.vercel.app/api?username=jiangbyte&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true)
-
-![](https://github-readme-streak-stats.herokuapp.com?user=jiangbyte&theme=github-dark&hide_border=true)
-
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=jiangbyte&layout=compact&theme=github_dark&hide_border=true&langs_count=8)
-
 ### 📈 Activity
 
 ![](https://github-readme-activity-graph.vercel.app/graph?username=jiangbyte&theme=github-dark&hide_border=true)
