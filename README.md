@@ -6,7 +6,7 @@
   <img align="right" src="https://github-readme-streak-stats.herokuapp.com?user=jiangbyte&theme=github-dark&hide_border=true" />
 </picture>
 
-**Full-stack Developer · CS Graduate '26 · Guizhou, China**
+**Full-stack Developer**
 
 A full-stack developer proficient in Java, Python, and Go, with project experience spanning web full-stack, desktop applications, and game development. Passionate about leveraging AI tools to boost productivity and staying curious about emerging technologies.
 
