@@ -10,7 +10,7 @@
 
 > 🚧 This profile is under active reconstruction — previous repositories have been rebuilt from scratch.
 
-A full-stack developer proficient in Java, Python, and Go, with project experience spanning web full-stack, desktop applications, and game development. Passionate about leveraging AI tools to boost productivity and staying curious about emerging technologies.
+Programming enthusiast.
 
 📫 Contact: [![](https://img.shields.io/badge/jiangbytebiz@163.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:jiangbytebiz@163.com) [![](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/jiangbyte) [![](https://img.shields.io/badge/GitHub_Pages-4285F4?style=flat-square&logo=github&logoColor=white)](https://jiangbyte.github.io) [![](https://img.shields.io/badge/Gitee-C71D23?style=flat-square&logo=gitee&logoColor=white)](https://gitee.com/jiangbyte) [![](https://img.shields.io/badge/掘金-1E80FF?style=flat-square)](https://juejin.cn/user/1968540037686224)
 
