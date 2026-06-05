@@ -12,7 +12,7 @@
 
 Programming enthusiast.
 
-📫 Contact: [![](https://img.shields.io/badge/jiangbytebiz@163.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:jiangbytebiz@163.com) [![](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/jiangbyte) [![](https://img.shields.io/badge/GitHub_Pages-4285F4?style=flat-square&logo=github&logoColor=white)](https://jiangbyte.github.io) [![](https://img.shields.io/badge/Gitee-C71D23?style=flat-square&logo=gitee&logoColor=white)](https://gitee.com/jiangbyte) [![](https://img.shields.io/badge/掘金-1E80FF?style=flat-square)](https://juejin.cn/user/1968540037686224)
+📫 Contact: [![](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/jiangbyte) [![](https://img.shields.io/badge/GitHub_Pages-4285F4?style=flat-square&logo=github&logoColor=white)](https://jiangbyte.github.io) [![](https://img.shields.io/badge/Gitee-C71D23?style=flat-square&logo=gitee&logoColor=white)](https://gitee.com/jiangbyte) [![](https://img.shields.io/badge/掘金-1E80FF?style=flat-square)](https://juejin.cn/user/1968540037686224)
 
 🛠️ Languages: ![](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white) ![](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white) ![](https://img.shields.io/badge/C%23-239120?style=flat-square&logo=csharp&logoColor=white) ![](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 
