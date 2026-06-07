@@ -6,11 +6,7 @@
   <img align="right" src="https://github-readme-streak-stats.herokuapp.com?user=jiangbyte&theme=github-dark&hide_border=true" />
 </picture>
 
-**Full-stack Developer**
-
 > 🚧 This profile is under active reconstruction — previous repositories have been rebuilt from scratch.
-
-Programming enthusiast.
 
 📫 Contact: [![](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/jiangbyte) [![](https://img.shields.io/badge/Gitee-C71D23?style=flat-square&logo=gitee&logoColor=white)](https://gitee.com/jiangbyte) [![](https://img.shields.io/badge/掘金-1E80FF?style=flat-square)](https://juejin.cn/user/1968540037686224)
 
