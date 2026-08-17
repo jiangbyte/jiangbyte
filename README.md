@@ -1,16 +1,52 @@
-# 👋 Hi, I'm Charlie Zhang
+### Hi, I'm Charlie
 
-> 🚧 This profile is under active reconstruction — previous repositories have been rebuilt from scratch.
+Programming enthusiast. Building things, writing notes at [jiangbyte.github.io](https://jiangbyte.github.io/).
 
-📫 Contact: [![](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/jiangbyte) [![](https://img.shields.io/badge/Gitee-C71D23?style=flat-square&logo=gitee&logoColor=white)](https://gitee.com/jiangbyte) [![](https://img.shields.io/badge/掘金-1E80FF?style=flat-square)](https://juejin.cn/user/1968540037686224)
+```text
+GitHub  ·  https://github.com/jiangbyte
+Gitee   ·  https://gitee.com/jiangbyte
+Blog    ·  https://jiangbyte.github.io
+Juejin  ·  https://juejin.cn/user/1968540037686224
+```
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=jiangbyte&theme=github-dark&hide_border=true" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=jiangbyte&theme=github-light&hide_border=true" />
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=jiangbyte&theme=github-dark&hide_border=true" />
-</picture>
+---
+
+#### Stats
 
 <p align="center">
-  <b>Thanks for visiting!</b>&nbsp;&nbsp;
-  <img src="https://komarev.com/ghpvc/?username=jiangbyte&color=blue&style=flat-square&label=Profile+Views" alt="Profile Views" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=jiangbyte&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=jiangbyte&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&theme=default" />
+    <img height="165" src="https://github-readme-stats.vercel.app/api?username=jiangbyte&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&theme=default" alt="GitHub stats" />
+  </picture>
+  &nbsp;
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=jiangbyte&layout=compact&hide_border=true&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=jiangbyte&layout=compact&hide_border=true&theme=default" />
+    <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jiangbyte&layout=compact&hide_border=true&theme=default" alt="Top languages" />
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=jiangbyte&theme=dark&hide_border=true" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=jiangbyte&theme=default&hide_border=true" />
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=jiangbyte&theme=default&hide_border=true" alt="GitHub streak" />
+  </picture>
+</p>
+
+#### Activity
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=jiangbyte&theme=github-dark&hide_border=true&area=true" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=jiangbyte&theme=github-light&hide_border=true&area=true" />
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=jiangbyte&theme=github-light&hide_border=true&area=true" alt="Contribution graph" />
+  </picture>
+</p>
+
+<p align="center">
+  <sub>
+    <img src="https://komarev.com/ghpvc/?username=jiangbyte&color=0969da&style=flat-square&label=views" alt="Profile views" />
+  </sub>
 </p>
