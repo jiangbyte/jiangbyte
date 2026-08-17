@@ -15,14 +15,14 @@ Juejin  ·  https://juejin.cn/user/1968540037686224
   <tr>
     <td valign="top" width="50%">
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="./profile/stats-dark.svg" />
-        <img src="./profile/stats.svg" alt="GitHub stats" />
+        <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api?username=jiangbyte&show_icons=true&include_all_commits=true&hide_border=true&theme=dark" />
+        <img src="https://github-readme-stats.shion.dev/api?username=jiangbyte&show_icons=true&include_all_commits=true&hide_border=true&theme=default" alt="GitHub stats" />
       </picture>
     </td>
     <td valign="top" width="50%">
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="./profile/top-langs-dark.svg" />
-        <img src="./profile/top-langs.svg" alt="Top languages" />
+        <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=jiangbyte&layout=compact&langs_count=6&hide_border=true&theme=dark" />
+        <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=jiangbyte&layout=compact&langs_count=6&hide_border=true&theme=default" alt="Top languages" />
       </picture>
       <br />
       <picture>
