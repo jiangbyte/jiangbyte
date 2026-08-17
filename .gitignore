@@ -1,3 +1,7 @@
 *
 !/.gitignore
 !/README.md
+!/.github/
+!/.github/**
+!/profile/
+!/profile/**
