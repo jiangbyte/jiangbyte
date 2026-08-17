@@ -9,8 +9,6 @@ Blog    ·  https://jiangbyte.github.io
 Juejin  ·  https://juejin.cn/user/1968540037686224
 ```
 
----
-
 #### Stats
 
 <table>
@@ -42,6 +40,4 @@ Juejin  ·  https://juejin.cn/user/1968540037686224
     <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=jiangbyte&theme=github-light&hide_border=true&area=true&height=200&radius=8" />
     <img width="100%" height="200" src="https://github-readme-activity-graph.vercel.app/graph?username=jiangbyte&theme=github-light&hide_border=true&area=true&height=200&radius=8" alt="Contribution graph" />
   </picture>
-  <br />
-  <img src="https://komarev.com/ghpvc/?username=jiangbyte&color=0969da&style=flat-square&label=views" alt="Profile views" />
 </p>
