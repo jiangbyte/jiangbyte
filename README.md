@@ -1,6 +1,6 @@
 ### Hi, I'm Charlie
 
-Programming enthusiast. Building things, writing notes at [jiangbyte.github.io](https://jiangbyte.github.io/).
+Programming enthusiast. Building things, writing notes at [jiangbyte.github.io](https://jiangbyte.github.io/). More about me on my [resume](https://jiangbyte.github.io/resume).
 
 ```text
 GitHub  ·  https://github.com/jiangbyte
