@@ -24,12 +24,6 @@ Juejin  ·  https://juejin.cn/user/1968540037686224
         <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=jiangbyte&layout=compact&langs_count=6&hide_border=true&theme=dark" />
         <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=jiangbyte&layout=compact&langs_count=6&hide_border=true&theme=default" alt="Top languages" />
       </picture>
-      <br />
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=jiangbyte&theme=dark&hide_border=true&short_numbers=true" />
-        <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=jiangbyte&theme=default&hide_border=true&short_numbers=true" />
-        <img width="100%" src="https://streak-stats.demolab.com/?user=jiangbyte&theme=default&hide_border=true&short_numbers=true" alt="GitHub streak" />
-      </picture>
     </td>
   </tr>
 </table>
