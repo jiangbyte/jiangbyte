@@ -33,11 +33,3 @@ Juejin  ·  https://juejin.cn/user/1968540037686224
     </td>
   </tr>
 </table>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=jiangbyte&theme=github-dark&hide_border=true&area=true&height=200&radius=8" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=jiangbyte&theme=github-light&hide_border=true&area=true&height=200&radius=8" />
-    <img width="100%" height="200" src="https://github-readme-activity-graph.vercel.app/graph?username=jiangbyte&theme=github-light&hide_border=true&area=true&height=200&radius=8" alt="Contribution graph" />
-  </picture>
-</p>
