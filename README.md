@@ -1,13 +1,7 @@
 ### Hi, I'm Charlie Zhang
 
-Programming enthusiast. I build things and write notes on [Juejin](https://juejin.cn/user/1968540037686224).  
+Programming enthusiast based in GZ, CN. I build things and write notes on [Juejin](https://juejin.cn/user/1968540037686224).  
 More background on my [Resume](https://jiangbyte.cn/resume).
-
-#### About
-
-- Languages across my repos: Java, TypeScript, Vue, Python, Go, C++, and C#
-- Frameworks: Spring Boot, Gin, FastAPI, Vue, uni-app, and WPF
-- Based in GZ, CN
 
 #### Tech Stack
 
