@@ -1,26 +1,23 @@
 ### Hi, I'm Charlie Zhang
 
-Backend / full-stack engineer focused on reusable project scaffolds and practical DDD.  
-I write notes on [Juejin](https://juejin.cn/user/1968540037686224). More background on my [resume](https://jiangbyte.cn/resume).
+Programming enthusiast. I build things and write notes on [Juejin](https://juejin.cn/user/1968540037686224).  
+More background on my [resume](https://jiangbyte.cn/resume).
 
 #### About
 
-- Build reusable engineering scaffolds with clear layering and practical DDD
-- Work across Java, Go, Python, and TypeScript, with admin and portal frontends
+- Languages across my repos: Java, TypeScript, Vue, Python, Go, C++, and C#
 - Based in GZ, CN
 
 #### Tech Stack
 
 <p>
   <img src="https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white" alt="Java" />
-  <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?logo=springboot&logoColor=white" alt="Spring Boot" />
-  <img src="https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=white" alt="Go" />
-  <img src="https://img.shields.io/badge/Gin-00ADD8?logo=go&logoColor=white" alt="Gin" />
-  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white" alt="FastAPI" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Vue-4FC08D?logo=vuedotjs&logoColor=white" alt="Vue" />
-  <img src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=white" alt="Go" />
+  <img src="https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=white" alt="C++" />
+  <img src="https://img.shields.io/badge/C%23-512BD4?logo=csharp&logoColor=white" alt="C#" />
 </p>
 
 #### Links
