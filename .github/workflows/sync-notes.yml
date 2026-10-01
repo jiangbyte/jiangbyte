@@ -1,0 +1,50 @@
+name: sync notes to github.io
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Notes/**"
+      - "TOC.md"
+      - "scripts/**"
+      - ".github/workflows/sync-notes.yml"
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout jiangbyte
+        uses: actions/checkout@v4
+        with:
+          path: jiangbyte
+
+      - name: Checkout jiangbyte.github.io
+        uses: actions/checkout@v4
+        with:
+          repository: jiangbyte/jiangbyte.github.io
+          token: ${{ secrets.GH_PAT }}
+          path: jiangbyte.github.io
+
+      - name: Sync Notes into docs/notes
+        run: |
+          set -euo pipefail
+          DEST="jiangbyte.github.io/docs/notes"
+          rm -rf "$DEST"
+          mkdir -p "$DEST"
+          cp -a jiangbyte/Notes/. "$DEST/"
+          python3 jiangbyte.github.io/scripts/gen_notes_sidebar.py
+
+      - name: Commit and push
+        working-directory: jiangbyte.github.io
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/notes
+          if git diff --staged --quiet; then
+            echo "No notes changes to publish"
+            exit 0
+          fi
+          git commit -m "chore: sync Notes from jiangbyte@${GITHUB_SHA::7}"
+          git push origin HEAD:main
