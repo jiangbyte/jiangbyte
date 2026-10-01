@@ -16,22 +16,12 @@ jobs:
       - name: Checkout jiangbyte
         uses: actions/checkout@v4
         with:
-          path: jiangbyte
           token: ${{ secrets.GH_PAT }}
-
-      - name: Checkout jiangbyte.github.io
-        uses: actions/checkout@v4
-        with:
-          repository: jiangbyte/jiangbyte.github.io
-          path: github-io
-          token: ${{ secrets.GH_PAT }}
-          submodules: recursive
 
       - name: Ensure Hugo frontmatter
-        run: python3 jiangbyte/scripts/add_frontmatter.py
+        run: python3 scripts/add_frontmatter.py
 
       - name: Commit frontmatter updates in Notes
-        working-directory: jiangbyte
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -43,20 +33,12 @@ jobs:
             echo "No Notes frontmatter changes"
           fi
 
-      - name: Sync Notes into site
-        run: python3 github-io/scripts/sync_notes.py "$GITHUB_WORKSPACE/jiangbyte/Notes"
-
-      - name: Commit and push site
-        working-directory: github-io
+      - name: Trigger site build (Notes stay out of site repo)
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # assets live under content/posts/**/assets (relative path + render hook)
-          git add -A content/posts
-          git add -u static/notes 2>/dev/null || true
-          if [ -n "$(git status --porcelain)" ]; then
-            git commit -m "chore: sync Notes from jiangbyte"
-            git push
-          else
-            echo "No site changes"
-          fi
+          gh api \
+            --method POST \
+            -H "Accept: application/vnd.github+json" \
+            /repos/jiangbyte/jiangbyte.github.io/dispatches \
+            -f event_type='notes-updated'
