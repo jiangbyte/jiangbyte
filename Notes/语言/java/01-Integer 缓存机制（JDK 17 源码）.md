@@ -1,3 +1,11 @@
+---
+title: "Integer 缓存机制（JDK 17 源码）"
+description: "Integer 的缓存不是业务层优化，而是 JLS 对自动装箱对象同一性 的硬要求：一定范围内的 int 装箱后必须是同一个 Integer 实例。实现落在私有静态内部类 Integer.IntegerCache，对外入口是 Integer…"
+permalink: /blog/语言/java/Integer 缓存机制（JDK 17 源码）/
+createTime: 2026-10-01
+tags: ["语言"]
+type: post
+---
 `Integer` 的缓存不是业务层优化，而是 **JLS 对自动装箱对象同一性** 的硬要求：一定范围内的 `int` 装箱后必须是**同一个** `Integer` 实例。实现落在私有静态内部类 `Integer.IntegerCache`，对外入口是 `Integer.valueOf(int)`。下文依据 JDK 17 的 `java.lang.Integer` 源码展开。
 
 ## 类上的 ValueBased

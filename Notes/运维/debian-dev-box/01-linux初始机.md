@@ -1,3 +1,11 @@
+---
+title: "linux初始机"
+description: "新装或刚到手的 Debian 开发机，先把「能正常干活」的底子铺好，再去改软件源、装 Docker、跑 MySQL / Redis。"
+permalink: /blog/运维/debian-dev-box/linux初始机/
+createTime: 2026-10-01
+tags: ["运维"]
+type: post
+---
 ## 目标
 
 新装或刚到手的 **Debian** 开发机，先把「能正常干活」的底子铺好，再去改软件源、装 Docker、跑 MySQL / Redis。

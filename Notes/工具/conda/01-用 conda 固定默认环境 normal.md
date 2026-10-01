@@ -1,3 +1,11 @@
+---
+title: "用 conda 固定默认环境 normal"
+description: "机器上同时有三套 Python 很容易搅在一起："
+permalink: /blog/工具/conda/用 conda 固定默认环境 normal/
+createTime: 2026-10-01
+tags: ["工具"]
+type: post
+---
 ## 先说目标
 
 机器上同时有三套 Python 很容易搅在一起：

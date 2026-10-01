@@ -1,3 +1,11 @@
+---
+title: "Debian中国源安装Docker"
+description: "已配好 Debian 软件源（见 02 配置 Debian 软件源） 确认代号："
+permalink: /blog/运维/debian-dev-box/Debian中国源安装Docker/
+createTime: 2026-10-01
+tags: ["运维"]
+type: post
+---
 ## 前置
 
 - 已配好 Debian 软件源（见 [02 配置 Debian 软件源](./02-配置Debian软件源.md)）

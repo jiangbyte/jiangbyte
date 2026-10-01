@@ -1,3 +1,11 @@
+---
+title: "ubuntu安装mysql"
+description: "Ubuntu 的 APT 源里自带 MySQL，装起来比 CentOS 省心不少。不过默认版本可能不是最新的，想指定版本或者用官方最新版也有办法。"
+permalink: /blog/运维/mysql/ubuntu安装mysql/
+createTime: 2026-10-01
+tags: ["运维"]
+type: post
+---
 ## 先说背景
 
 Ubuntu 的 APT 源里自带 MySQL，装起来比 CentOS 省心不少。不过默认版本可能不是最新的，想指定版本或者用官方最新版也有办法。

@@ -26,24 +26,30 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           path: jiangbyte.github.io
 
-      - name: Sync Notes into docs/notes
+      - name: Ensure frontmatter then sync into content/blog
         run: |
           set -euo pipefail
-          DEST="jiangbyte.github.io/docs/notes"
-          rm -rf "$DEST"
-          mkdir -p "$DEST"
-          cp -a jiangbyte/Notes/. "$DEST/"
-          python3 jiangbyte.github.io/scripts/gen_notes_sidebar.py
+          python3 jiangbyte/scripts/add_frontmatter.py
+          python3 jiangbyte.github.io/scripts/sync_notes.py "$(pwd)/jiangbyte/Notes"
+          # if frontmatter changed in Notes, commit back to jiangbyte
+          cd jiangbyte
+          if ! git diff --quiet -- Notes; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add Notes
+            git commit -m "chore: refresh Notes frontmatter"
+            git push
+          fi
 
-      - name: Commit and push
+      - name: Commit and push site content
         working-directory: jiangbyte.github.io
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/notes
+          git add content/blog public/notes
           if git diff --staged --quiet; then
-            echo "No notes changes to publish"
+            echo "No site content changes"
             exit 0
           fi
           git commit -m "chore: sync Notes from jiangbyte@${GITHUB_SHA::7}"

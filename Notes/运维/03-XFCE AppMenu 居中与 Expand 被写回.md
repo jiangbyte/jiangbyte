@@ -1,3 +1,11 @@
+---
+title: "XFCE AppMenu 居中与 Expand 被写回"
+description: "顶栏装了 AppMenu Plugin 之后："
+permalink: /blog/运维/XFCE AppMenu 居中与 Expand 被写回/
+createTime: 2026-10-01
+tags: ["运维"]
+type: post
+---
 ## 现象
 
 顶栏装了 **AppMenu Plugin** 之后：

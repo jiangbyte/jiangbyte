@@ -1,3 +1,11 @@
+---
+title: "Cursor WSL 连接失败？手动安装 cursor-server 的完整方案"
+description: "在 Windows 上用 Cursor 打开 WSL 项目时，左下角一直转圈，等待比较久......好像也没有安装好，检查 ~/.cursor-server/bin/ 目录，发现 commit id 的目录是空的，说明自动下载失败了。这在国…"
+permalink: /blog/工具/agent/cursor/Cursor WSL 连接失败？手动安装 cursor-server 的完整方案/
+createTime: 2026-10-01
+tags: ["工具"]
+type: post
+---
 ## 先说问题
 
 在 Windows 上用 Cursor 打开 WSL 项目时，左下角一直转圈，等待比较久......好像也没有安装好，检查 `~/.cursor-server/bin/` 目录，发现 `commit id` 的目录是空的，说明自动下载失败了。这在国内网络环境下应该常见，因为服务器文件有 125MB，可能下载中途断掉了。

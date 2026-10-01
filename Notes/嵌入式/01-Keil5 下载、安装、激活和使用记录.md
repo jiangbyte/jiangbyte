@@ -1,3 +1,11 @@
+---
+title: "Keil5 下载、安装、激活和使用记录"
+description: "安装包下载地址： https://pan.quark.cn/s/6a455cd4bce2"
+permalink: /blog/嵌入式/Keil5 下载、安装、激活和使用记录/
+createTime: 2026-10-01
+tags: ["嵌入式"]
+type: post
+---
 ## 下载 Keil5
 
 **安装包下载地址**：  

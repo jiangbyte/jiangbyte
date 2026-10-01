@@ -1,3 +1,11 @@
+---
+title: "使用 Docker 快速部署数据服务环境"
+description: "首先创建所有服务的数据持久化目录："
+permalink: /blog/运维/docker/使用 Docker 快速部署数据服务环境/
+createTime: 2026-10-01
+tags: ["运维"]
+type: post
+---
 ## 前置准备
 
 首先创建所有服务的数据持久化目录：

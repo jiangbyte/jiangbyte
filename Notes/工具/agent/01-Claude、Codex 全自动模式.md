@@ -1,3 +1,11 @@
+---
+title: "Claude、Codex 全自动模式"
+description: "\"YOLO 模式\"（或叫\"全自动模式\"）是为了让 AI 编程助手在不经你逐次确认的情况下，全自动执行指令。Codex 和 Claude Code 都有各自的开启方式，但核心逻辑和风险是一样的。"
+permalink: /blog/工具/agent/Claude、Codex 全自动模式/
+createTime: 2026-10-01
+tags: ["工具"]
+type: post
+---
 "YOLO 模式"（或叫"全自动模式"）是为了让 AI 编程助手在不经你逐次确认的情况下，全自动执行指令。Codex 和 Claude Code 都有各自的开启方式，但核心逻辑和风险是一样的。
 
 YOLO 模式主要通过两种方式开启：**命令行参数**和**配置文件**。

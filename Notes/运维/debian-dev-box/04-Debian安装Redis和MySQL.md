@@ -1,3 +1,11 @@
+---
+title: "Debian安装Redis和MySQL"
+description: "本文要装的是 Oracle MySQL 和 Redis，不是 MariaDB。"
+permalink: /blog/运维/debian-dev-box/Debian安装Redis和MySQL/
+createTime: 2026-10-01
+tags: ["运维"]
+type: post
+---
 ## 说明
 
 本文要装的是 **Oracle MySQL** 和 **Redis**，不是 MariaDB。

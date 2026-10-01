@@ -1,3 +1,11 @@
+---
+title: "ubuntu安装redis"
+description: "Ubuntu 比 CentOS 省心点，APT 源里直接有 Redis，不用额外加仓库。不过版本可能不是最新的，想尝鲜还是得自己编译。"
+permalink: /blog/运维/redis/ubuntu安装redis/
+createTime: 2026-10-01
+tags: ["运维"]
+type: post
+---
 ## 先说背景
 
 Ubuntu 比 CentOS 省心点，APT 源里直接有 Redis，不用额外加仓库。不过版本可能不是最新的，想尝鲜还是得自己编译。

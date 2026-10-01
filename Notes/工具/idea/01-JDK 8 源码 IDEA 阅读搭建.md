@@ -1,3 +1,11 @@
+---
+title: "JDK 8 源码 IDEA 阅读搭建"
+description: "个人比较习惯用 IDEA 读源码。下面把一套「可改、可调试、不影响日常 JDK」的 JDK 8 源码阅读环境搭起来。"
+permalink: /blog/工具/idea/JDK 8 源码 IDEA 阅读搭建/
+createTime: 2026-10-01
+tags: ["工具"]
+type: post
+---
 个人比较习惯用 IDEA 读源码。下面把一套「可改、可调试、不影响日常 JDK」的 JDK 8 源码阅读环境搭起来。
 
 截图按步骤放在同目录 `assets/` 下，文件名与正文引用一致；没有图时先按文字操作即可。
