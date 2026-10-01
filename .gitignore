@@ -1,3 +1,23 @@
-*
-!/.gitignore
-!/README.md
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Secrets / local env
+.env
+.env.*
+!.env.example
+
+# Logs / build leftovers
+*.log
+node_modules/
+dist/
+build/
+__pycache__/
+*.pyc
+.venv/
+venv/
+target/
