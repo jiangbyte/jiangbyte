@@ -1,10 +1,10 @@
 ---
 title: "配置Debian软件源"
+date: 2026-10-01
+draft: false
 description: "默认 deb.debian.org 在国内经常慢或不稳。开发机建议："
-permalink: /blog/运维/debian-dev-box/配置Debian软件源/
-createTime: 2026-10-01
+categories: ["运维"]
 tags: ["运维"]
-type: post
 ---
 ## 为什么要改源
 

@@ -1,10 +1,10 @@
 ---
 title: "Webhook 与飞书机器人集成"
+date: 2026-10-01
+draft: false
 description: "审计告警功能需要把检测到的安全事件推送到飞书群。飞书提供了自定义机器人 Webhook 的接口，支持文本和富文本消息格式，也可以配置 HMAC-SHA256 签名验证。"
-permalink: /blog/实践/Webhook 与飞书机器人集成/
-createTime: 2026-10-01
+categories: ["实践"]
 tags: ["实践"]
-type: post
 ---
 审计告警功能需要把检测到的安全事件推送到飞书群。飞书提供了自定义机器人 Webhook 的接口，支持文本和富文本消息格式，也可以配置 HMAC-SHA256 签名验证。
 

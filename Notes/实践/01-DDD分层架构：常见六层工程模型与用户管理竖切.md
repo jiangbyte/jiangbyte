@@ -1,10 +1,10 @@
 ---
 title: "DDD分层架构：常见六层工程模型与用户管理竖切"
+date: 2026-10-01
+draft: false
 description: "先说结论：分层是为了改需求时知道改哪一层。"
-permalink: /blog/实践/DDD分层架构：常见六层工程模型与用户管理竖切/
-createTime: 2026-10-01
+categories: ["实践"]
 tags: ["实践"]
-type: post
 ---
 先说结论：分层是为了**改需求时知道改哪一层**。
 

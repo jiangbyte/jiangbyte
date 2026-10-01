@@ -1,10 +1,10 @@
 ---
 title: "Debian 13 XFCE 开发机整理：熄屏、软件源、全局菜单与防火墙"
+date: 2026-10-01
+draft: false
 description: "机器是一台日常开发本：Debian GNU/Linux 13 (trixie) + XFCE，硬件是 HP ProBook，双 NVMe，本机还跑着 Docker（MySQL / Redis / Portainer 等）。"
-permalink: /blog/运维/Debian 13 XFCE 开发机整理：熄屏、软件源、全局菜单与防火墙/
-createTime: 2026-10-01
+categories: ["运维"]
 tags: ["运维"]
-type: post
 ---
 ## 先说场景
 

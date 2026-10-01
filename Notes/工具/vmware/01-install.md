@@ -1,10 +1,10 @@
 ---
 title: "install"
+date: 2026-10-01
+draft: false
 description: "本文按 2026-06-19 时点可获取的 26H1 免费版 流程整理，主要记录 Windows 宿主机上的下载和安装步骤。"
-permalink: /blog/工具/vmware/install/
-createTime: 2026-10-01
+categories: ["工具"]
 tags: ["工具"]
-type: post
 ---
 本文按 **2026-06-19** 时点可获取的 **26H1 免费版** 流程整理，主要记录 **Windows 宿主机**上的下载和安装步骤。
 

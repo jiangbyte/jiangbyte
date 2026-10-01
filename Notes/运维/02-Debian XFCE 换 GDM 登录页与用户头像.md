@@ -1,10 +1,10 @@
 ---
 title: "Debian XFCE 换 GDM 登录页与用户头像"
+date: 2026-10-01
+draft: false
 description: "机器：Debian 13（trixie）+ XFCE，原先用 LightDM + lightdm-gtk-greeter。"
-permalink: /blog/运维/Debian XFCE 换 GDM 登录页与用户头像/
-createTime: 2026-10-01
+categories: ["运维"]
 tags: ["运维"]
-type: post
 ---
 ## 目标与边界
 
