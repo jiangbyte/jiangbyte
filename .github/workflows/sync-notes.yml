@@ -1,10 +1,11 @@
-name: Sync Notes to github.io
+name: Sync content to github.io
 
 on:
   push:
     branches: [main]
     paths:
       - "Notes/**"
+      - "Projects/**"
       - "scripts/**"
       - ".github/workflows/sync-notes.yml"
   workflow_dispatch:
@@ -18,7 +19,7 @@ jobs:
         with:
           token: ${{ secrets.GH_PAT }}
 
-      - name: Ensure Hugo frontmatter
+      - name: Ensure Hugo frontmatter on Notes
         run: python3 scripts/add_frontmatter.py
 
       - name: Commit frontmatter updates in Notes
@@ -33,7 +34,7 @@ jobs:
             echo "No Notes frontmatter changes"
           fi
 
-      - name: Trigger site build (Notes stay out of site repo)
+      - name: Trigger site build (Notes/Projects stay out of site repo)
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
@@ -41,4 +42,4 @@ jobs:
             --method POST \
             -H "Accept: application/vnd.github+json" \
             /repos/jiangbyte/jiangbyte.github.io/dispatches \
-            -f event_type='notes-updated'
+            -f event_type='content-updated'
