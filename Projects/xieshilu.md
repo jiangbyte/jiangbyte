@@ -2,20 +2,63 @@
 title: 撷时录
 date: 2026-10-02
 weight: 1
-description: 基于 Hugo Solitude 的个人站点，乳白毛玻璃视觉。
+description: 基于 Hugo Solitude 的个人笔记与项目站
 git: https://github.com/jiangbyte/jiangbyte.github.io
 site: https://jiangbyte.github.io/
 tags: [Hugo, Solitude]
+toc: true
 ---
 
-个人笔记站「撷时录」：用 Hugo + Solitude，配合乳白毛玻璃自定义样式。
+「撷时录」是笔记沉淀与作品展示合一的静态站点：主题 [Hugo Solitude](https://solitude.js.org/)，内容仓与站点仓分离，产物发布到 GitHub Pages（`gh-pages`）。笔记走分类与标签；项目走独立卡片与详情页，本页即其中一篇。
 
-## 做什么
+权威源不在站点仓。`jiangbyte/Notes` 同步为 posts，`jiangbyte/Projects` 同步为项目页。推送站点 `main`，或推送笔记 / 项目路径，Actions 同步、Hugo 生成，再把 `public/` 推到 Pages。
 
-- 笔记与实践记录
-- 项目展示（本页所在板块）
-- 外链简历等独立站点入口
+```mermaid
+flowchart LR
+  notes["jiangbyte/Notes"]
+  projects["jiangbyte/Projects"]
+  site["jiangbyte.github.io"]
+  pages["GitHub Pages"]
+  notes -->|"sync_notes"| site
+  projects -->|"sync_projects"| site
+  site -->|"Hugo"| pages
+```
+
+## 项目集
+
+同一展厅收录桌面工具、隔离执行、OJ、DDD 脚手架与轻量前端。卡片按 `weight` 排列；详情页写定位、特性与示意，不堆安装手册。
+
+```mermaid
+flowchart TB
+  hub["撷时录 · 项目展厅"]
+  desk["桌面"]
+  infra["评测与隔离"]
+  scaf["脚手架"]
+  web["轻量 Web"]
+  hub --> desk
+  hub --> infra
+  hub --> scaf
+  hub --> web
+  desk --> xuanjian["玄鉴"]
+  desk --> m3u8["M3U8 Downloader"]
+  desk --> resume["ResumeFloat"]
+  infra --> acoj["ACOJ"]
+  infra --> spark["SparkSandbox"]
+  scaf --> voxel["Voxel 系列"]
+  web --> startpage["Startpage"]
+```
+
+## 特性
+
+- **笔记与实践**：运维、框架、工具链、嵌入式与工程实践，分类 + 标签归档
+- **项目展厅**：独立 Markdown；仓库入口、演示地址、GitHub 仓库卡片
+- **内容同步**：`sync_notes.py` / `sync_projects.py`，本地与 CI 同一拷贝约定
+- **主题定制**：Solitude 上调整布局、项目网格与样式，保留主题升级路径
+- **外链入口**：简历等独立站点走导航与项目卡，不挤占笔记信息架构
 
 ## 技术栈
 
-Hugo、Solitude、自定义 CSS。
+- 静态生成：Hugo
+- 主题：Solitude
+- 发布：GitHub Actions → `gh-pages` / GitHub Pages
+- 内容仓：[jiangbyte/jiangbyte](https://github.com/jiangbyte/jiangbyte)

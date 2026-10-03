@@ -20,7 +20,7 @@ tags: ["运维"]
 
 下面按实际操作顺序写，命令可直接复用。
 
-## 1. XFCE：关掉自动熄屏和挂起
+## XFCE：关掉自动熄屏和挂起
 
 ### 电源管理 GUI
 
@@ -66,7 +66,7 @@ xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/blank-on-ac -s 0
 xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/blank-on-battery -s 0
 ```
 
-## 2. 系统要不要更新：先看源，再看数量
+## 系统要不要更新：先看源，再看数量
 
 ### 表面现象
 
@@ -131,7 +131,7 @@ sudo apt upgrade -y
 
 **不要**对着带 `/unstable` 的那一千个包直接 `full-upgrade`。
 
-## 3. XFCE 全局菜单：AppMenu，不是 XApp Menu
+## XFCE 全局菜单：AppMenu，不是 XApp Menu
 
 ### 容易混淆的名字
 
@@ -214,7 +214,7 @@ xfce4-panel -r
 也可右键 AppMenu → 属性，取消勾选 **Expand plugin on panel**。  
 注意：插件启动往往会把 expand 写回 `true`，只改 GUI 不够。完整原因与登录后强制关掉的脚本见：[XFCE AppMenu 居中与 Expand 被写回](./XFCE%20AppMenu%20居中与%20Expand%20被写回.md)。
 
-## 4. 资源占用一眼看懂
+## 资源占用一眼看懂
 
 整理防火墙前顺手摸了一下（开机约 1 小时时）：
 
@@ -237,7 +237,7 @@ ps aux --sort=-%cpu | head
 sensors   # 需 lm-sensors
 ```
 
-## 5. 防火墙：开发机默认不对外开放
+## 防火墙：开发机默认不对外开放
 
 ### 整理前的真实状态
 

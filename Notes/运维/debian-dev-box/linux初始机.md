@@ -15,11 +15,11 @@ tags: ["运维"]
 建议阅读顺序：
 
 1. 本文：01 Linux 初始机
-2. [02 配置 Debian 软件源](./02-配置Debian软件源.md)
-3. [03 Debian 中国源安装 Docker](./03-Debian中国源安装Docker.md)
-4. [04 Debian 安装 Redis 和 MySQL](./04-Debian安装Redis和MySQL.md)
+2. [配置 Debian 软件源](./配置Debian软件源.md)
+3. [Debian 中国源安装 Docker](./Debian中国源安装Docker.md)
+4. [Debian 安装 Redis 和 MySQL](./Debian安装Redis和MySQL.md)
 
-## 1. 确认系统
+## 确认系统
 
 ```bash
 cat /etc/os-release
@@ -32,7 +32,7 @@ hostnamectl
 - `VERSION_CODENAME`（如 `trixie`）——后面写源、装 Docker 都要用
 - 架构一般为 `x86-64` / `amd64`
 
-## 2. 用户与 sudo
+## 用户与 sudo
 
 安装时若已创建普通用户并勾选 sudo，可跳过。否则：
 
@@ -52,7 +52,7 @@ whoami
 
 开发机建议：**日常用普通用户，需要提权再 `sudo`**，不要长期挂在 root 图形会话里。
 
-## 3. 基础工具包
+## 基础工具包
 
 ```bash
 sudo apt update
@@ -74,7 +74,7 @@ sudo apt install -y p7zip-full ncdu
 sudo apt install -y tmux fzf ripgrep
 ```
 
-## 4. 时区与语言
+## 时区与语言
 
 ```bash
 # 时区（上海）
@@ -93,7 +93,7 @@ sudo dpkg-reconfigure locales
 echo 'export LANG=zh_CN.UTF-8' >> ~/.bashrc
 ```
 
-## 5. 目录习惯（开发机）
+## 目录习惯（开发机）
 
 后面 Docker 数据、项目都会落到固定路径，建议一开始就定好，例如：
 
@@ -111,7 +111,7 @@ mkdir -p ~/Workspace/datas/{mysql,redis,silo,ngnix}
 
 不要把数据库目录随手丢在 `/tmp` 或家目录乱七八糟的位置。
 
-## 6. SSH（可选）
+## SSH（可选）
 
 笔记本纯本机开发可以不装。若需要远程连进来：
 
@@ -123,7 +123,7 @@ sudo ss -tlnp | grep ':22'
 
 **务必配密钥登录，并配合防火墙只放行可信来源。** 开发本默认对外暴露 22 风险较大。
 
-## 7. 图形会话小提示（XFCE）
+## 图形会话小提示（XFCE）
 
 - 电源管理：插电 / 电池都把自动挂起、熄屏调到合适值（长期编译、下载时建议 Never）
 - 输入法：`fcitx5` + 中文插件是常见组合
@@ -131,7 +131,7 @@ sudo ss -tlnp | grep ':22'
 
 更细的桌面整理（熄屏、AppMenu、UFW）见：[Debian 13 XFCE 开发机整理](../Debian 13 XFCE 开发机整理：熄屏、软件源、全局菜单与防火墙.md)
 
-## 8. 做完初始机之后
+## 做完初始机之后
 
 ```bash
 # 系统是否健康

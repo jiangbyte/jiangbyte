@@ -15,7 +15,7 @@ tags: ["运维"]
 
 同时要避免把 **sid（unstable）**、旧版 **bullseye** 和当前稳定版写进同一套默认源，否则 `apt list --upgradable` 会刷出上千个包，一不小心就把桌面拖进滚动版。
 
-## 1. 备份
+## 备份
 
 ```bash
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak.$(date +%Y%m%d%H%M%S)
@@ -30,7 +30,7 @@ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak.$(date +%Y%m%d%H%M%S)
 
 下文以 **trixie** 为例，其他版本替换代号即可。
 
-## 2. 推荐的 sources.list
+## 推荐的 sources.list
 
 以**中国科学技术大学（USTC）**镜像为例：
 
@@ -59,7 +59,7 @@ EOF
 
 `non-free` / `non-free-firmware` 笔记本固件、部分驱动会用到，桌面机建议带上。
 
-## 3. 不要混进这些
+## 不要混进这些
 
 以下内容应注释或删除：
 
@@ -73,7 +73,7 @@ EOF
 
 临时需要某个 sid 包时，用 **pinning** 或单独下载 deb，不要把 sid 当成默认源长期开着。
 
-## 4. 刷新并检查
+## 刷新并检查
 
 ```bash
 sudo apt update
@@ -91,7 +91,7 @@ apt-cache policy linux-image-amd64
 
 `Candidate` 应落在 `trixie` / `trixie-security`，而不是 `sid`。
 
-## 5. 升级怎么升才稳
+## 升级怎么升才稳
 
 ```bash
 # 安全、常规：在当前发行版内升级
@@ -108,7 +108,7 @@ apt-get -s full-upgrade
 [ -f /var/run/reboot-required ] && cat /var/run/reboot-required.pkgs
 ```
 
-## 6. 第三方源（可选）
+## 第三方源（可选）
 
 Chrome、VS Code、Docker 等通常写在 `/etc/apt/sources.list.d/`，与系统源分离，互不影响。例如：
 
@@ -124,4 +124,4 @@ Docker 的中国源安装见下一篇。
 - **只保留当前代号**（如 trixie），别混 sid / 旧版  
 - 日常 `apt upgrade`，不要被「上千个 upgradable」吓去盲升 unstable  
 
-下一篇：[03 Debian 中国源安装 Docker](./03-Debian中国源安装Docker.md)
+下一篇：[Debian 中国源安装 Docker](./Debian中国源安装Docker.md)

@@ -26,7 +26,7 @@ tags: ["运维"]
 
 ---
 
-## 1. 先备份
+## 先备份
 
 ```bash
 sudo cp -a /etc/X11/default-display-manager \
@@ -47,9 +47,9 @@ ls /usr/share/xsessions/
 
 ---
 
-## 2. 安装 GDM：注意混源 / 过新库
+## 安装 GDM：注意混源 / 过新库
 
-### 2.1 理想情况（纯 trixie）
+### 理想情况（纯 trixie）
 
 图形桌面里执行即可，**不必**先切救援模式或纯命令行：
 
@@ -87,7 +87,7 @@ sudo reboot
 
 登录页若出现会话菜单，选 **Xfce Session**。
 
-### 2.2 本机踩坑：glib / heif / xkb 比 trixie 新
+### 本机踩坑：glib / heif / xkb 比 trixie 新
 
 若机器上曾混过 **sid** 包（例如 `libglib2.0` / `gir1.2-glib-2.0` 已是 2.89.x），直接装 trixie 的 `gdm3` 常会失败，典型报错类似：
 
@@ -128,7 +128,7 @@ sudo apt-get update
 
 ---
 
-## 3. 重启后：不选 Session 进不去
+## 重启后：不选 Session 进不去
 
 ### 现象
 
@@ -184,7 +184,7 @@ echo 'NoDisplay=true' | sudo tee -a /usr/share/xsessions/lightdm-xsession.deskto
 
 ---
 
-## 4. GDM 图形配置：GDM Settings
+## GDM 图形配置：GDM Settings
 
 GDM **没有**像「控制中心里完整登录页编辑器」的官方小面板；实用方案是 Flatpak **GDM Settings**：
 
@@ -206,9 +206,9 @@ flatpak run io.github.realmazharhussain.GdmSettings
 
 ---
 
-## 5. 登录页用户头像
+## 登录页用户头像
 
-### 5.1 头像实际读哪里
+### 头像实际读哪里
 
 | 路径 | 作用 |
 |------|------|
@@ -227,7 +227,7 @@ busctl get-property org.freedesktop.Accounts \
   org.freedesktop.Accounts.User IconFile
 ```
 
-### 5.2 为什么只改 ~/.face / 用 Mugshot「没用」
+### 为什么只改 ~/.face / 用 Mugshot「没用」
 
 常见两层原因（本机都遇到过）：
 
@@ -244,7 +244,7 @@ busctl get-property org.freedesktop.Accounts \
 
 Mugshot 会拉 cheese/clutter 等依赖；若不想污染环境，用下面手动步骤即可，不必装 Mugshot。
 
-### 5.3 以后更换头像（推荐步骤）
+### 以后更换头像（推荐步骤）
 
 把 `你的图.jpg`、用户名换成自己的：
 
@@ -279,13 +279,13 @@ sudo busctl call org.freedesktop.Accounts \
 
 也可用「GNOME 设置 → 用户」点头像；若只更新了 `~/.face`、登录页没变，仍按上面把图拷到 `/var/lib/AccountsService/icons/`。
 
-### 5.4 不建议的「永久自动化」
+### 不建议的「永久自动化」
 
 用 systemd path 监听 `~/.face` 再 sudo 同步、或为缩放再装一堆图像库，容易引入多余依赖、搞乱环境。开发机更稳妥是：**换头像时跑一遍上面的小段命令**。
 
 ---
 
-## 6. 回退到 LightDM（GDM 起不来时）
+## 回退到 LightDM（GDM 起不来时）
 
 `Ctrl+Alt+F3` 登录后：
 
@@ -301,7 +301,7 @@ LightDM 包平时可保留，不必为换 GDM 卸载。
 
 ---
 
-## 7. 检查清单
+## 检查清单
 
 换 GDM 后建议确认：
 

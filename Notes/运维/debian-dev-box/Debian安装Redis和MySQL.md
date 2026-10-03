@@ -23,15 +23,15 @@ Debian 自带仓库里的 `default-mysql-server` 实际会装成 **MariaDB**，*
 
 前置：
 
-- [01 Linux 初始机](./01-linux初始机.md)
-- [02 配置 Debian 软件源](./02-配置Debian软件源.md)
-- 走 Docker 时还需 [03 Debian 中国源安装 Docker](./03-Debian中国源安装Docker.md)
+- [Linux 初始机](./linux初始机.md)
+- [配置 Debian 软件源](./配置Debian软件源.md)
+- 走 Docker 时还需 [Debian 中国源安装 Docker](./Debian中国源安装Docker.md)
 
 ---
 
 ## 方式 A：软件源安装（含密码配置）
 
-### A0. 先清掉可能装过的 MariaDB（如有）
+### 先清掉可能装过的 MariaDB（如有）
 
 若以前误装过 `default-mysql-server` / `mariadb-*`，先卸干净，避免抢端口和混淆：
 
@@ -43,7 +43,7 @@ sudo apt autoremove -y
 sudo ss -tlnp | grep 3306 || echo '3306 free'
 ```
 
-### A1. 安装 Redis（Debian 源）
+### 安装 Redis（Debian 源）
 
 ```bash
 sudo apt update
@@ -59,7 +59,7 @@ redis-cli ping
 # PONG
 ```
 
-### A2. 配置 Redis 密码
+### 配置 Redis 密码
 
 ```bash
 sudo vim /etc/redis/redis.conf
@@ -94,7 +94,7 @@ OK
 
 数据默认在 `/var/lib/redis/`，配置在 `/etc/redis/redis.conf`。
 
-### A3. 添加 MySQL 官方 APT 源
+### 添加 MySQL 官方 APT 源
 
 Debian 仓库里没有真正的 `mysql-server`，需要 Oracle 的配置包：
 
@@ -129,7 +129,7 @@ apt-cache policy mysql-community-server
 # Candidate 应来自 repo.mysql.com，而不是 mariadb
 ```
 
-### A4. 安装 MySQL Community Server
+### 安装 MySQL Community Server
 
 ```bash
 sudo apt update
@@ -156,7 +156,7 @@ sudo ln -sf /usr/lib/x86_64-linux-gnu/libaio.so.1t64 \
 sudo systemctl restart mysql
 ```
 
-### A5. 配置 / 修改 MySQL root 密码
+### 配置 / 修改 MySQL root 密码
 
 **做法一：安全脚本**
 
@@ -205,7 +205,7 @@ mysql -uroot -p'infra123!' -e "SELECT VERSION();"
 # 版本字符串应含 MySQL，不含 MariaDB
 ```
 
-### A6. 建库与业务用户
+### 建库与业务用户
 
 ```bash
 mysql -uroot -p'infra123!'
@@ -218,7 +218,7 @@ GRANT ALL PRIVILEGES ON app.* TO 'app'@'localhost';
 FLUSH PRIVILEGES;
 ```
 
-### A7. 临时远程连接（MySQL 8.0+）
+### 临时远程连接（MySQL 8.0+）
 
 仅在调试需要时开放，用完立刻收回。MySQL 8.0 要求 **先建用户、再授权**，不能再写成老的 `GRANT ... IDENTIFIED BY` 一条龙。
 
@@ -291,7 +291,7 @@ sudo ufw status numbered
 sudo systemctl restart mysql
 ```
 
-### A8. 默认只绑本机（日常）
+### 默认只绑本机（日常）
 
 ```bash
 sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
@@ -305,7 +305,7 @@ bind-address = 127.0.0.1
 sudo systemctl restart mysql
 ```
 
-### A9. apt 方式常用命令
+### apt 方式常用命令
 
 ```bash
 sudo systemctl restart redis-server
@@ -326,7 +326,7 @@ sudo journalctl -u mysql -e
 | MySQL | `mysql:9.7.2` | `~/Workspace/datas/mysql` | 3306 | `unless-stopped` |
 | Redis | `redis:8.8.2` | `~/Workspace/datas/redis` | 6379 | `unless-stopped` |
 
-### B1. 准备目录
+### 准备目录
 
 ```bash
 mkdir -p ~/Workspace/datas/{mysql,redis}
@@ -339,7 +339,7 @@ mkdir -p ~/Workspace/datas/{mysql,redis}
 # sudo chown -R 999:999 ~/Workspace/datas/redis
 ```
 
-### B2. MySQL 9.7.2
+### MySQL 9.7.2
 
 ```bash
 docker run -d --name mysql \
@@ -364,7 +364,7 @@ CREATE DATABASE app DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 临时远程时：SQL 与方式 A 的 **A7** 相同（`CREATE USER 'root'@'%'` → `GRANT` → `FLUSH`；用完 `REVOKE` / `DROP USER`）。Docker 侧把端口从 `127.0.0.1:3306` 临时改成 `0.0.0.0:3306`（或保持 `3306:3306`），UFW / `DOCKER-USER` 同步放开可信网段，用完改回。
 
-### B3. Redis 8.8.2
+### Redis 8.8.2
 
 官方镜像不会自动把 `REDIS_PASSWORD` 变成 `requirepass`，密码写在参数里，并开 AOF：
 
@@ -384,7 +384,7 @@ docker exec redis redis-cli -a 'infra123!' SET hello world
 ls -la ~/Workspace/datas/redis
 ```
 
-### B4. Docker 运维
+### Docker 运维
 
 ```bash
 docker ps -a --filter name='mysql|redis'
@@ -395,7 +395,7 @@ docker stop mysql redis && docker start mysql redis
 
 删容器可保留数据：不要删 `~/Workspace/datas/{mysql,redis}`。
 
-### B5. 从命名卷迁到 datas（可选）
+### 从命名卷迁到 datas（可选）
 
 ```bash
 docker stop mysql
@@ -407,7 +407,7 @@ docker rm mysql
 docker volume rm mysql_data   # 确认无误后
 ```
 
-### B6. 端口安全
+### 端口安全
 
 仅本机访问时：
 

@@ -18,7 +18,7 @@ tags: ["工具"]
 
 下面以 miniforge（路径 `/home/charlie/miniforge3`）为例，过程对 Anaconda / Miniconda 同样适用，改一下前缀即可。
 
-## 1. 创建 `normal` 环境
+## 创建 `normal` 环境
 
 选用相对稳妥的 3.12：
 
@@ -42,7 +42,7 @@ conda env list
 
 网络不稳时下载可能被 `Connection reset by peer` 打断，直接重跑同一条 `conda create` 即可，已下完的包会复用缓存。
 
-## 2. 关掉 base 自动激活
+## 关掉 base 自动激活
 
 默认安装后，新开 shell 会进 `base`。先关掉：
 
@@ -58,7 +58,7 @@ auto_activate: false
 
 这样登录时不会再默认进 `base`。
 
-## 3. 让 bash 登录后自动进 `normal`
+## 让 bash 登录后自动进 `normal`
 
 在 `~/.bashrc` 的 conda initialize 块末尾加上激活语句：
 
@@ -92,7 +92,7 @@ conda activate normal 2>/dev/null
 conda activate normal
 ```
 
-## 4. 让 Cursor 也指向 `normal`
+## 让 Cursor 也指向 `normal`
 
 只改 shell 不够，编辑器里跑 Python / 选解释器时仍可能跳到别的环境。在 Cursor 用户设置里加上：
 
@@ -108,7 +108,7 @@ conda activate normal
 
 路径按本机 conda 前缀调整。改完后重开集成终端，或在命令面板里重新选一次解释器确认。
 
-## 5. 验收
+## 验收
 
 干净登录测一下（或新开一个终端）：
 

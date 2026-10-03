@@ -18,7 +18,7 @@ tags: ["运维"]
 
 ---
 
-## 1. AppMenu 是什么（不是另一套更好的菜单）
+## AppMenu 是什么（不是另一套更好的菜单）
 
 面板里叫 **AppMenu Plugin** 的东西，包名是：
 
@@ -33,7 +33,7 @@ apt-cache show xfce4-appmenu-plugin | grep -E '^(Package|Source|Description)'
 
 ---
 
-## 2. 为什么会「居中」
+## 为什么会「居中」
 
 面板插件有个开关：**Expand plugin on panel**（扩展以填满可用空间）。
 
@@ -50,7 +50,7 @@ AppMenu 打开 Expand 后，会占满中间整段空白。标题文字往往在�
 
 ---
 
-## 3. 为什么关掉又会回来
+## 为什么关掉又会回来
 
 只改 GUI 不够。`xfce4-appmenu-plugin` 启动时会把 Expand **默认写成 `true`**，并写回 xfconf。所以：
 
@@ -84,11 +84,11 @@ xfconf-query -c xfce4-panel -p /plugins/plugin-2/expand -n -t bool -s false
 
 ---
 
-## 4. 永久压住：登录后强制 Expand=false
+## 永久压住：登录后强制 Expand=false
 
 思路：不跟插件抢「启动瞬间」的默认值，等面板和 AppMenu 起来后，**再写两次 false**（插件有时会晚一点再写回一次）。
 
-### 4.1 脚本
+### 脚本
 
 ```bash
 mkdir -p ~/.local/bin
@@ -134,7 +134,7 @@ chmod +x ~/.local/bin/appmenu-no-expand.sh
 
 脚本会自动找名为 `appmenu` 的插件，不写死 ID。
 
-### 4.2 开机自启
+### 开机自启
 
 ```bash
 mkdir -p ~/.config/autostart
@@ -171,9 +171,9 @@ xfconf-query -c xfce4-panel -l -v | grep -E 'plugin-.*/expand|appmenu'
 
 ---
 
-## 5. 踩过的坑
+## 踩过的坑
 
-### 5.1 坏掉的 autostart
+### 坏掉的 autostart
 
 曾经有过一个 `appmenu-left-align.desktop`，`Exec` 指向不存在的路径或错误命令——会话里等于没跑。  
 若「写了自启却无效」，先：
@@ -185,15 +185,15 @@ ls -l ~/.local/bin/appmenu-no-expand.sh
 
 确认可执行、路径一致。
 
-### 5.2 只改了一处 expand
+### 只改了一处 expand
 
 只改 `/plugins/plugin-N/expand` 或只改嵌套路径，表现会不稳定。脚本里两处都写。
 
-### 5.3 Compact mode
+### Compact mode
 
 属性里还有 **Compact mode**：菜单更挤一点，**解决不了** Expand 居中问题。居中靠 Expand + 分隔符布局，不靠 Compact。
 
-### 5.4 和 Window Buttons / Windowck 的区别
+### 和 Window Buttons / Windowck 的区别
 
 | 插件 | 作用 |
 |---|---|
@@ -204,7 +204,7 @@ ls -l ~/.local/bin/appmenu-no-expand.sh
 
 ---
 
-## 6. 小结
+## 小结
 
 | 点 | 结论 |
 |---|---|

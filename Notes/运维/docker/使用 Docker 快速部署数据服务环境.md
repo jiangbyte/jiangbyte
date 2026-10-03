@@ -17,7 +17,7 @@ mkdir -p ~/docker-data/{postgres,redis,rabbitmq}
 
 ## 服务部署
 
-### 1. PostgreSQL（支持向量扩展，端口5433）
+### PostgreSQL（支持向量扩展，端口5433）
 
 ```bash
 # 拉取支持向量扩展的PostgreSQL镜像
@@ -46,7 +46,7 @@ docker exec -it postgres psql -U postgres -d myapp -c "SELECT 1+1;"
 # 返回 ?column? | 2 表示成功
 ```
 
-### 2. Redis（缓存服务，端口6380）
+### Redis（缓存服务，端口6380）
 
 ```bash
 # 拉取Redis镜像
@@ -69,7 +69,7 @@ docker exec -it redis redis-cli -a 123456 ping
 # 返回 PONG 表示成功
 ```
 
-### 3. RabbitMQ（消息队列，端口5673/15673）
+### RabbitMQ（消息队列，端口5673/15673）
 
 ```bash
 # 拉取带管理界面的RabbitMQ镜像
@@ -90,7 +90,7 @@ docker run -d \
 
 **管理界面访问：** `http://你的IP:15673`，账号 `admin` / 密码 `123456`
 
-### 4. MySQL（备用数据库，端口3307）
+### MySQL（备用数据库，端口3307）
 
 如需要MySQL作为备用数据库，可使用以下配置：
 

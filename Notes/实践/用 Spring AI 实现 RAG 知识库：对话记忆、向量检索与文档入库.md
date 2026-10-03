@@ -24,7 +24,7 @@ tags: ["实践"]
 
 下面按实现顺序写整条链路：模块怎么分、Spring AI 怎么接、文档如何切片入库、RAG 与记忆如何同时生效，以及默认 RAG 提示词会坑闲聊等问题。
 
-## 1. 目标与整体架构
+## 目标与整体架构
 
 先明确要做的行为：
 
@@ -64,7 +64,7 @@ web/             独立前端工程
 
 依赖方向保持单向：`interfaces → application → domain`，`infrastructure` 实现 application 里的端口。
 
-## 2. Spring AI 接入：双 Provider 分流
+## Spring AI 接入：双 Provider 分流
 
 Spring AI 2.x 很方便的一点：classpath 上可以同时放多个模型 Starter，再用属性指定「哪种能力用谁」：
 
@@ -85,7 +85,7 @@ spring:
 - `spring-ai-vector-store-advisor`（`QuestionAnswerAdvisor`）
 - `spring-ai-client-chat`（`ChatClient`）
 
-### 2.1 Chat：OpenAI 兼容（百炼 / Model Studio）
+### Chat：OpenAI 兼容（百炼 / Model Studio）
 
 百炼等平台提供 OpenAI Compatible Mode。Spring AI 2.x 底层走 `openai-java` SDK，**base-url 需要带 `/v1`**，例如：
 
@@ -108,7 +108,7 @@ spring:
 
 若 base-url 少写 `/v1` 或多拼一层路径，常见表现是 `404 Unknown`；密钥缺失则是 `401`。联调时先分清是「路径」还是「鉴权」。
 
-### 2.2 Embedding：本地 Ollama
+### Embedding：本地 Ollama
 
 向量化继续用本机 Ollama，维度与 Milvus collection 对齐（本项目用 **768**）：
 
@@ -125,7 +125,7 @@ spring:
 
 这样 Chat 可以上云、Embedding 留本地，两边也能单独替换。**换 Embedding 模型或维度时，旧向量不可复用**，需要重建 Milvus collection 并重新入库。
 
-### 2.3 Milvus VectorStore
+### Milvus VectorStore
 
 ```yaml
 spring:
@@ -148,7 +148,7 @@ spring:
 
 有了 `VectorStore` Bean，后面的入库与 RAG Advisor 都直接依赖这个抽象，而不是手写 gRPC。
 
-## 3. 对话记忆：Redis Chat Memory
+## 对话记忆：Redis Chat Memory
 
 多轮对话不能只靠前端把历史全塞进 prompt。Spring AI 提供 `MessageChatMemoryAdvisor` + Redis 仓储（基于 RediSearch）：
 
@@ -182,7 +182,7 @@ advisors.param(ChatMemory.CONVERSATION_ID, conversationId);
 
 记忆解决的是「上一句我说我叫 charlie，下一句问我是谁」；RAG 解决的是「制度里市外出差补贴多少」。两者职责不同，后面会放到同一条 Advisor 链里。
 
-## 4. ChatClient 装配：记忆 + RAG 同时挂上
+## ChatClient 装配：记忆 + RAG 同时挂上
 
 核心配置类大致如下（简化）：
 
@@ -248,9 +248,9 @@ public record ChatRequest(String message, String conversationId, Long kbId) {}
 
 流式接口用 SSE：`event=message` 推增量，`event=done` + `[DONE]` 结束。前端因要 POST JSON，用 `fetch` + `ReadableStream` 解析，而不是浏览器原生只支持 GET 的 `EventSource`。
 
-## 5. 多知识库与文档处理（入库链路）
+## 多知识库与文档处理（入库链路）
 
-### 5.1 元数据表
+### 元数据表
 
 MySQL 只存「库」和「文件」元数据，不存向量：
 
@@ -265,7 +265,7 @@ kb_file(id, kb_id, file_name, content_type, file_size,
 
 `kb_file.status` 建议走状态机：`UPLOADED → INDEXING → INDEXED / FAILED`，失败时把原因写到 `error_message`，方便后台排查。
 
-### 5.2 上传与索引流程
+### 上传与索引流程
 
 应用层用例（逻辑顺序）：
 
@@ -277,7 +277,7 @@ kb_file(id, kb_id, file_name, content_type, file_size,
 
 删除文件时：先删向量（按 `fileId`），再删对象存储，再删（或逻辑删）元数据。删知识库前要求库下无文件，并清理该 `kbId` 下残留向量。
 
-### 5.3 Tika 解析 + TokenTextSplitter + Milvus
+### Tika 解析 + TokenTextSplitter + Milvus
 
 依赖 `spring-ai-tika-document-reader`，用 `TikaDocumentReader` 把字节解析成 `Document`，再用 Spring AI 的 `TokenTextSplitter` 切片（替代手写固定字符窗）：
 
@@ -322,7 +322,7 @@ Filter.Expression expression = new FilterExpressionBuilder()
 vectorStore.delete(expression);
 ```
 
-## 6. RAG 提示词：默认模板会坑闲聊
+## RAG 提示词：默认模板会坑闲聊
 
 这是联调时最容易误判成「模型不行」的点。
 
@@ -359,7 +359,7 @@ vectorStore.delete(expression);
 
 这样「制度问答」和「多轮闲聊 + 记忆」可以共存在同一条链路里。
 
-## 7. 前端如何配合
+## 前端如何配合
 
 前端不是本文重点，但和后端契约强相关：
 
@@ -370,7 +370,7 @@ vectorStore.delete(expression);
 
 开发期 Vite 把 `/ai` 代理到 `8080` 即可。
 
-## 8. 联调清单与常见坑
+## 联调清单与常见坑
 
 **环境**
 
@@ -397,7 +397,7 @@ vectorStore.delete(expression);
 | 重复上传结果变乱                        | 索引前是否按 `fileId` 删除旧向量                 |
 | Deprecated `chat.options.model` | 改为 `spring.ai.openai.chat.model`      |
 
-## 9. The End
+## The End
 
 这套实现里，Spring AI 比较省事的地方主要是：
 

@@ -107,7 +107,7 @@ Webhook 配置页面上加了一个测试按钮，填好 Webhook URL 和可选�
 
 不填密钥时直接发送，收不到说明 URL 或网络有问题。填了密钥收不到，说明签名计算和服务端预期的不一致，排查上面三个点。
 
-![](assets/Pasted%20image%2020260724193448.png)
+![](assets/Pasted image 20260724193448.png)
 
 
-![](assets/Pasted%20image%2020260724193530.png)
+![](assets/Pasted image 20260724193530.png)

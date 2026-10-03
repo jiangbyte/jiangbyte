@@ -33,7 +33,7 @@ cursor --version
 
 输出：
 
-![](assets/Pasted%20image%2020260729070937.png)
+![](assets/Pasted image 20260729070937.png)
 
 ```
 "55434bd8062ece6fee083b82beed2aee42d253f0"
@@ -63,7 +63,7 @@ curl -sI "https://cursor.blob.core.windows.net/remote-releases/55434bd8062ece6fe
 
 返回 `HTTP/1.1 200 OK` 就没问题。
 
-![](assets/Pasted%20image%2020260729071216.png)
+![](assets/Pasted image 20260729071216.png)
 
 ### 下载并解压
 
@@ -105,7 +105,7 @@ rm -f ~/.cursor-server/.installation_lock*
 
 输出：
 
-![](assets/Pasted%20image%2020260729071322.png)
+![](assets/Pasted image 20260729071322.png)
 
 版本号和 commit ID 对上，说明安装成功了。
 
@@ -113,7 +113,7 @@ rm -f ~/.cursor-server/.installation_lock*
 
 回到 Cursor Windows 端，点击左下角 **><** 图标，重新连接 WSL。这次应该秒连，不再卡在安装步骤。
 
-![](assets/Pasted%20image%2020260729071400.png)
+![](assets/Pasted image 20260729071400.png)
 ## 如果 Cursor 更新了版本
 
 每次 Cursor 更新版本，commit ID 会变，需要重新安装对应的 server。流程一样：
