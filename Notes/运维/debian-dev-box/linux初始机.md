@@ -1,11 +1,10 @@
 ---
-title: "linux初始机"
 date: 2026-10-01
-draft: false
 description: "新装或刚到手的 Debian 开发机，先把「能正常干活」的底子铺好，再去改软件源、装 Docker、跑 MySQL / Redis。"
 categories: ["运维"]
 tags: ["运维"]
 ---
+
 ## 目标
 
 新装或刚到手的 **Debian** 开发机，先把「能正常干活」的底子铺好，再去改软件源、装 Docker、跑 MySQL / Redis。

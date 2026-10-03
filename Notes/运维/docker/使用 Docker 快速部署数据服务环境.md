@@ -1,11 +1,10 @@
 ---
-title: "使用 Docker 快速部署数据服务环境"
 date: 2026-10-01
-draft: false
 description: "首先创建所有服务的数据持久化目录："
 categories: ["运维"]
 tags: ["运维"]
 ---
+
 ## 前置准备
 
 首先创建所有服务的数据持久化目录：

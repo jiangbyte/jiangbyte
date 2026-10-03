@@ -1,5 +1,4 @@
 ---
-title: Startpage
 date: 2026-09-06
 weight: 4
 description: 无数据库的个人书签导航起始页
@@ -7,8 +6,9 @@ git: https://github.com/jiangbyte/startpage
 site: https://jiangbyte.github.io/startpage/
 tags: [Vite, React, TypeScript]
 toc: true
+aliases:
+  - /projects/startpage/
 ---
-
 **Startpage** 是静态托管的个人书签导航起始页：无后端、无数据库，书签写在源码。`url` 必填，`title` / `description` 可手写覆盖；未手写则 Microlink 拉元数据，失败回退 hostname。在线：[jiangbyte.github.io/startpage](https://jiangbyte.github.io/startpage/)。
 
 浏览器默认页 + 分类书签 + 多搜索引擎，不引入账号或同步服务。`main` 推送后 Actions 构建 `dist/` 部署 Pages。

@@ -1,11 +1,10 @@
 ---
-title: "Hugo相对路径图片显示问题的分析与解决"
 date: 2026-10-01
-draft: false
 description: "写博客的时候用 Obsidian 插了张图："
 categories: ["工具"]
 tags: ["工具"]
 ---
+
 ## 先说问题
 
 写博客的时候用 Obsidian 插了张图：

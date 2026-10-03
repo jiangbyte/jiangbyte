@@ -1,11 +1,10 @@
 ---
-title: "XFCE AppMenu 居中与 Expand 被写回"
 date: 2026-10-01
-draft: false
 description: "顶栏装了 AppMenu Plugin 之后："
 categories: ["运维"]
 tags: ["运维"]
 ---
+
 ## 现象
 
 顶栏装了 **AppMenu Plugin** 之后：

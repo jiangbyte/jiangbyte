@@ -1,13 +1,13 @@
 ---
-title: ResumeFloat
 date: 2026-09-18
 weight: 6
 description: 跨平台置顶悬浮简历速拷工具
 git: https://github.com/jiangbyte/ResumeFloat
 tags: [Tauri, React, SQLite]
 toc: true
+aliases:
+  - /projects/resume-float/
 ---
-
 **ResumeFloat** 是跨平台置顶悬浮简历速拷工具：默认 Compact 为「标签 + 一键复制」，可切入编辑。条目由可组合块构成（纯文本 / Markdown / 富文本 / 图片），数据落 SQLite，支持整库导出导入。当前版本 `0.1.1`，MIT。
 
 面试、网申、即时通讯反复粘贴自我介绍、项目要点、联系方式时，置顶窗口减少在文档与聊天之间切换。`v*` 标签触发 Actions 构建三端安装包，见 [Releases](https://github.com/jiangbyte/ResumeFloat/releases)。

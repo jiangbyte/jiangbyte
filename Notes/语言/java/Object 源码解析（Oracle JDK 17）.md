@@ -1,11 +1,10 @@
 ---
-title: "Object 源码解析（Oracle JDK 17）"
 date: 2026-10-01
-draft: false
 description: "java.lang.Object 是 Java 类型体系的根：除它自身外，每个类（含数组类型）最终都继承它，因而它定义的方法构成「所有对象共有的最小行为集」[^object-src]。下文依据本机 Oracle JDK 17.0.20.1（…"
 categories: ["语言"]
 tags: ["语言"]
 ---
+
 `java.lang.Object` 是 Java 类型体系的根：除它自身外，每个类（含数组类型）最终都继承它，因而它定义的方法构成「所有对象共有的最小行为集」[^object-src]。下文依据本机 **Oracle JDK 17.0.20.1**（`$JAVA_HOME`=`/home/charlie/workspace/sdks/jdk-17`）自带源码包中的 `Object.java`，按成员出现顺序解析——侧重**为何存在、契约与 HotSpot 如何支撑、工程上如何用**；源码与本机实测用来锚定结论，而不是逐行注释。
 
 源码路径：`$JAVA_HOME/lib/src.zip` → `java.base/java/lang/Object.java`[^object-src]。

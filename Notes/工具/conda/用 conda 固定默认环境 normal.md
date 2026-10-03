@@ -1,11 +1,10 @@
 ---
-title: "用 conda 固定默认环境 normal"
 date: 2026-10-01
-draft: false
 description: "机器上同时有三套 Python 很容易搅在一起："
 categories: ["工具"]
 tags: ["工具"]
 ---
+
 ## 先说目标
 
 机器上同时有三套 Python 很容易搅在一起：

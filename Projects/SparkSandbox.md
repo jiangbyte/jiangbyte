@@ -1,13 +1,13 @@
 ---
-title: SparkSandbox
 date: 2026-08-31
 weight: 3
 description: Linux 隔离执行 HTTP 服务：编译、限资源运行与多测例
 git: https://github.com/jiangbyte/SparkSandbox
 tags: [C++, FastAPI, Sandbox, Linux]
 toc: true
+aliases:
+  - /projects/spark-sandbox/
 ---
-
 **SparkSandbox** 是 Linux 上的**隔离执行 HTTP 服务**，不是对外 SDK。任意语言发 HTTP 完成编译与运行，HMAC 验签由调用方实现。响应含 stdout、stderr、资源用量与执行状态；支持多测例、checker、interactive pipeline、文件仓与 SSE。仓内 Python 仅供本仓测试。当前版本 `0.1.1`，MIT。
 
 OJ、在线 IDE、作业评测把「跑用户代码」交给本服务；AC / WA 留在业务侧。[ACOJ](https://github.com/jiangbyte/acoj) 判题执行即对接此服务。

@@ -1,11 +1,10 @@
 ---
-title: "ubuntu安装redis"
 date: 2026-10-01
-draft: false
 description: "Ubuntu 比 CentOS 省心点，APT 源里直接有 Redis，不用额外加仓库。不过版本可能不是最新的，想尝鲜还是得自己编译。"
 categories: ["运维"]
 tags: ["运维"]
 ---
+
 ## 先说背景
 
 Ubuntu 比 CentOS 省心点，APT 源里直接有 Redis，不用额外加仓库。不过版本可能不是最新的，想尝鲜还是得自己编译。

@@ -1,11 +1,10 @@
 ---
-title: "Docker 本机基础设施执行命令"
 date: 2026-10-03
-draft: false
 description: "本机 Docker 拉取并运行 MySQL、Redis、Silo、RabbitMQ、Ollama、etcd、Attu 等基础设施的命令备忘。"
 categories: ["运维"]
 tags: ["运维"]
 ---
+
 ## 拉取镜像
 
 ```bash

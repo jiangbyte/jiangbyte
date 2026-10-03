@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Ensure Notes/*.md use Hugo/Solitude frontmatter."""
+"""Ensure Notes/*.md use Hugo/Solitude frontmatter.
+
+Title comes from the filename (Hugo ContentBaseName). Do not write `title`.
+`draft` is omitted for published posts; only drafts keep `draft: true`.
+"""
 
 from __future__ import annotations
 
@@ -8,16 +12,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 NOTES = Path(__file__).resolve().parent.parent / "Notes"
-PREFIX_RE = re.compile(r"^\d+-")
 FM_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n?", re.S)
 
 
 def yaml_quote(s: str) -> str:
     return '"' + s.replace("\\", "\\\\").replace('"', '\\"') + '"'
-
-
-def title_of(path: Path) -> str:
-    return PREFIX_RE.sub("", path.stem)
 
 
 def category_of(rel: Path) -> str:
@@ -60,6 +59,21 @@ def parse_existing_date(fm: str) -> str | None:
     return None
 
 
+def has_key(fm: str, key: str) -> bool:
+    return bool(re.search(rf"^{re.escape(key)}:", fm, re.M))
+
+
+def drop_key(fm: str, key: str) -> str:
+    return re.sub(rf"^{re.escape(key)}:\s*.*\n?", "", fm, flags=re.M)
+
+
+def is_draft_true(fm: str) -> bool:
+    m = re.search(r"^draft:\s*(\S+)", fm, re.M)
+    if not m:
+        return False
+    return m.group(1).strip().strip("\"'").lower() in {"true", "yes", "1"}
+
+
 def ensure_frontmatter(path: Path) -> bool:
     text = path.read_text(encoding="utf-8")
     fm_body = ""
@@ -69,37 +83,41 @@ def ensure_frontmatter(path: Path) -> bool:
         fm_body = m.group(1)
         body = text[m.end() :].lstrip("\n")
 
-    # Already Hugo-shaped?
-    if (
-        fm_body
-        and re.search(r"^date:", fm_body, re.M)
-        and re.search(r"^categories:", fm_body, re.M)
-        and not re.search(r"^(permalink|createTime|type):", fm_body, re.M)
-    ):
-        return False
-
     rel = path.relative_to(NOTES)
-    title = title_of(path)
     cat = category_of(rel)
-    desc = first_paragraph(body) or title
+    desc = first_paragraph(body) or path.stem
     date = parse_existing_date(fm_body) or datetime.fromtimestamp(
         path.stat().st_mtime, tz=timezone.utc
     ).date().isoformat()
+    draft_true = is_draft_true(fm_body)
 
-    fm = "\n".join(
-        [
-            "---",
-            f"title: {yaml_quote(title)}",
-            f"date: {date}",
-            "draft: false",
-            f"description: {yaml_quote(desc)}",
-            f"categories: [{yaml_quote(cat)}]",
-            f"tags: [{yaml_quote(cat)}]",
-            "---",
-            "",
-        ]
-    )
-    path.write_text(fm + body, encoding="utf-8")
+    fm = fm_body
+    fm = drop_key(fm, "title")
+    fm = drop_key(fm, "draft")
+    fm = drop_key(fm, "permalink")
+    fm = drop_key(fm, "createTime")
+    fm = drop_key(fm, "type")
+    fm = fm.strip() + "\n" if fm.strip() else ""
+
+    lines: list[str] = []
+    if not has_key(fm, "date"):
+        lines.append(f"date: {date}")
+    if not has_key(fm, "description"):
+        lines.append(f"description: {yaml_quote(desc)}")
+    if not has_key(fm, "categories"):
+        lines.append(f"categories: [{yaml_quote(cat)}]")
+    if not has_key(fm, "tags"):
+        lines.append(f"tags: [{yaml_quote(cat)}]")
+    if draft_true:
+        lines.append("draft: true")
+
+    if lines:
+        fm = (fm.rstrip() + "\n" if fm.strip() else "") + "\n".join(lines) + "\n"
+
+    new_text = "---\n" + fm.strip() + "\n---\n\n" + body
+    if new_text == text:
+        return False
+    path.write_text(new_text, encoding="utf-8")
     return True
 
 

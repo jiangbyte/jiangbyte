@@ -1,13 +1,13 @@
 ---
-title: M3U8 Downloader
 date: 2026-09-18
 weight: 2
 description: 跨平台桌面端 m3u8 多线程下载器
 git: https://github.com/jiangbyte/M3u8Downloader
 tags: [Tauri, Rust, React, HLS]
 toc: true
+aliases:
+  - /projects/m3u8-downloader/
 ---
-
 **M3U8 Downloader** 是面向 HLS 的跨平台桌面下载器：解析 master / media playlist，并发拉取 TS 分片，ffmpeg `-c copy` remux 为 MP4。引擎在 Rust，界面 React，壳层 Tauri 2，覆盖 Windows、macOS、Linux。当前版本 `0.1.1`，MIT。
 
 相对「脚本拼接分片」，清晰度选择、AES-128、代理与自定义请求、任务/分片控制、断点续传和边下边播放进同一任务模型。安装包见 [Releases](https://github.com/jiangbyte/M3u8Downloader/releases)。

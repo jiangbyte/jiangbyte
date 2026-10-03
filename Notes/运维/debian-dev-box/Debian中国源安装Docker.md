@@ -1,11 +1,10 @@
 ---
-title: "Debian中国源安装Docker"
 date: 2026-10-01
-draft: false
 description: "已配好 Debian 软件源（见 02 配置 Debian 软件源） 确认代号："
 categories: ["运维"]
 tags: ["运维"]
 ---
+
 ## 前置
 
 - 已配好 Debian 软件源（见 [配置 Debian 软件源](./配置Debian软件源.md)）

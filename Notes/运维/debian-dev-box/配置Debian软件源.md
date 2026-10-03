@@ -1,11 +1,10 @@
 ---
-title: "配置Debian软件源"
 date: 2026-10-01
-draft: false
 description: "默认 deb.debian.org 在国内经常慢或不稳。开发机建议："
 categories: ["运维"]
 tags: ["运维"]
 ---
+
 ## 为什么要改源
 
 默认 `deb.debian.org` 在国内经常慢或不稳。开发机建议：
