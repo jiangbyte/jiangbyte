@@ -1,28 +1,34 @@
-name: Sync content to github.io
+# Content publish no longer uses repository_dispatch.
+# Use ./scripts/push.sh — it syncs Notes/Projects into jiangbyte.github.io
+# on branch sync/content; that repo's workflow merges into main and deploys.
+#
+# This workflow only keeps Hugo frontmatter tidy when Notes are pushed
+# without going through push.sh.
+name: Ensure Notes frontmatter
 
 on:
   push:
     branches: [main]
     paths:
       - "Notes/**"
-      - "Projects/**"
-      - "scripts/**"
+      - "scripts/add_frontmatter.py"
       - ".github/workflows/sync-notes.yml"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  sync:
+  frontmatter:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout jiangbyte
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GH_PAT }}
 
       - name: Ensure Hugo frontmatter on Notes
         run: python3 scripts/add_frontmatter.py
 
-      - name: Commit frontmatter updates in Notes
+      - name: Commit frontmatter updates
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -33,13 +39,3 @@ jobs:
           else
             echo "No Notes frontmatter changes"
           fi
-
-      - name: Trigger site build (Notes/Projects stay out of site repo)
-        env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}
-        run: |
-          gh api \
-            --method POST \
-            -H "Accept: application/vnd.github+json" \
-            /repos/jiangbyte/jiangbyte.github.io/dispatches \
-            -f event_type='content-updated'
