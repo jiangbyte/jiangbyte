@@ -1,7 +1,8 @@
 ### Hi, I'm Charlie Zhang
 
-Programming enthusiast based in GZ, CN. I build things and write notes on [Juejin](https://juejin.cn/user/1968540037686224).  
-More background on my [Resume](https://jiangbyte.cn/resume).
+Programming enthusiast based in GZ, CN. I build things and write notes on [Juejin](https://juejin.cn/user/1968540037686224) and [jiangbyte.cn](https://jiangbyte.cn)
+
+More background on my [Resume](https://resume.jiangbyte.cn).
 
 #### Tech Stack
 
