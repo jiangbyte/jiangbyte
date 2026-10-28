@@ -2,8 +2,6 @@
 
 Programming enthusiast based in GZ, CN. I build things and write notes on [Juejin](https://juejin.cn/user/1968540037686224) and [jiangbyte.cn](https://jiangbyte.cn)
 
-More background on my [Resume](https://resume.jiangbyte.cn).
-
 #### Tech Stack
 
 <p>
@@ -27,7 +25,6 @@ More background on my [Resume](https://resume.jiangbyte.cn).
   <a href="https://github.com/jiangbyte"><img src="https://img.shields.io/badge/GitHub-jiangbyte-181717?logo=github&logoColor=white" alt="GitHub" /></a>
   <a href="https://gitee.com/jiangbyte"><img src="https://img.shields.io/badge/Gitee-jiangbyte-C71D23?logo=gitee&logoColor=white" alt="Gitee" /></a>
   <a href="https://juejin.cn/user/1968540037686224"><img src="https://img.shields.io/badge/Juejin-juejin.cn-1E80FF?logo=juejin&logoColor=white" alt="Juejin" /></a>
-  <a href="https://jiangbyte.cn/resume"><img src="https://img.shields.io/badge/Resume-jiangbyte.cn-0A66C2?logo=readme&logoColor=white" alt="Resume" /></a>
 </p>
 
 #### Stats
