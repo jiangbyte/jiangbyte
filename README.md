@@ -2,6 +2,12 @@
 
 Programming enthusiast based in GZ, CN. I build things and write notes on [Juejin](https://juejin.cn/user/1968540037686224) and [jiangbyte.cn](https://jiangbyte.cn)
 
+#### Open Source Org
+
+Slightly more polished projects are published under **[jiangfolio](https://github.com/jiangfolio)**. Repositories on this personal account are more mixed — experiments, drafts, and day-to-day work.
+
+Recent org projects: [imgkit](https://github.com/jiangfolio/imgkit) · [xuanjian](https://github.com/jiangfolio/xuanjian) · [acoj](https://github.com/jiangfolio/acoj) · [SparkSandbox](https://github.com/jiangfolio/SparkSandbox) · [M3u8Downloader](https://github.com/jiangfolio/M3u8Downloader) · [ResumeFloat](https://github.com/jiangfolio/ResumeFloat)
+
 #### Tech Stack
 
 <p>
@@ -23,6 +29,7 @@ Programming enthusiast based in GZ, CN. I build things and write notes on [Jueji
 
 <p>
   <a href="https://github.com/jiangbyte"><img src="https://img.shields.io/badge/GitHub-jiangbyte-181717?logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://github.com/jiangfolio"><img src="https://img.shields.io/badge/Org-jiangfolio-0969DA?logo=github&logoColor=white" alt="jiangfolio" /></a>
   <a href="https://gitee.com/jiangbyte"><img src="https://img.shields.io/badge/Gitee-jiangbyte-C71D23?logo=gitee&logoColor=white" alt="Gitee" /></a>
   <a href="https://juejin.cn/user/1968540037686224"><img src="https://img.shields.io/badge/Juejin-juejin.cn-1E80FF?logo=juejin&logoColor=white" alt="Juejin" /></a>
 </p>
